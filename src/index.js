@@ -8,7 +8,7 @@ const wdyd = new Command()
 
 wdyd
     .name('wdyd')
-    .description('What Did You Did - A node CLI utility to write via interface great commit message (conventional commit guidelines)')
+    .description('What Did You Do - A node CLI utility to write via interface great commit message (conventional commit guidelines)')
     .version('0.0.1')
 
 commands.forEach((command) => {
