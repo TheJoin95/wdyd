@@ -48,7 +48,7 @@ Run the following command to get a list of commands:
 ```
 Usage: wdyd [options] [command]
 
-What Did You Did - A node CLI utility to write via interface great commit message (conventional commit guidelines)
+What Did You Do - A node CLI utility to write via interface great commit message (conventional commit guidelines)
 
 Options:
   -V, --version                               output the version number
