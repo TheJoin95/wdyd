@@ -4,6 +4,7 @@
   "description": "A node CLI utility to write via interface great commit message (conventional commit guidelines)",
   "main": "src/index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
