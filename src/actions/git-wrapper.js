@@ -25,7 +25,7 @@ module.exports = (cmd, scope, subject, body = undefined, footer = undefined) => 
         console.log(warn('Your message is short, be carefoul'))
     }
 
-    exec(`git commit --amend -m \'${cmd}(${scope}): ${subject}${body}${footer}\'`, (err, stdout) => {
+    exec(`git commit -m \'${cmd}(${scope}): ${subject}${body}${footer}\'`, (err, stdout) => {
         if (err) {
             console.error(error(err))
             return
