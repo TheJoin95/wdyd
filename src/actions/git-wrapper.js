@@ -34,11 +34,7 @@ module.exports = (cmd, scope, subject, body = undefined, footer = undefined) => 
         const regex = /(nothing added to commit|no changes added to commit)/g;
         const nothingAdded = stdout.match(regex);
 
-        console.log(nothingAdded, stdout)
-
-        return
-
-        nothingAdded.length !== 0 ? console.log(warn('You forgot to add your files to the staging area. Try to do git add .')) :
+        nothingAdded && nothingAdded.length !== 0 ? console.log(warn('You forgot to add your files to the staging area. Try to do git add .')) :
             exec(`git commit -m \'${cmd}(${scope}): ${subject}${body}${footer}\'`, (err, stdout) => {
                 if (err) {
                     console.error(error(err))
