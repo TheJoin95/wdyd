@@ -1,6 +1,6 @@
 {
   "name": "wdyd",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A node CLI utility to write via CLI & Interactive interface great commit message (conventional commit guidelines)",
   "main": "src/index.js",
   "scripts": {
