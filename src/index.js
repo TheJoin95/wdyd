@@ -17,5 +17,4 @@ commands.forEach((command) => {
         .argument('[footer]', 'The footer should contain any information about Breaking Changes and is also the place to reference GitHub issues that this commit Closes.')
         .action((scope, subject, body, footer) => gitWrapper(command.name, scope, subject, body, footer))
 })
-
 wdyd.parse()
