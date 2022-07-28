@@ -25,12 +25,23 @@ module.exports = (cmd, scope, subject, body = undefined, footer = undefined) => 
         console.log(warn('Your message is short, be carefoul'))
     }
 
-    exec(`git commit -m \'${cmd}(${scope}): ${subject}${body}${footer}\'`, (err, stdout) => {
+    exec(`git status`, (err, stdout) => {
         if (err) {
             console.error(error(err))
             return
         }
 
-        console.log(success(stdout))
+        const regex = /no changes added to commit/g;
+        const nothingAdded = stdout.match(regex);
+
+        nothingAdded.length !== 0 ? console.log(warn('You forgot to add your files to the staging area. Try to do git add .')) :
+            exec(`git commit -m \'${cmd}(${scope}): ${subject}${body}${footer}\'`, (err, stdout) => {
+                if (err) {
+                    console.error(error(err))
+                    return
+                }
+
+                console.log(success(stdout))
+            })
     })
 }
