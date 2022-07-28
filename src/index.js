@@ -5,7 +5,7 @@ const interactive = require('./actions/interactive')
 const wdyd = new Command()
 
 wdyd
-    .name('WDYD')
+    .name('wdyd')
     .description('What Did You Did - A node CLI utility to write via interface great commit message (conventional commit guidelines)')
     .version('0.0.1')
 
