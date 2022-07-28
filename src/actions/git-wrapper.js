@@ -22,7 +22,7 @@ module.exports = (cmd, scope, subject, body = undefined, footer = undefined) => 
     }
 
     if (subject.length < 10) {
-        console.log(warn('Your message is short, be carefoul'))
+        console.log(warn('Your message is short, be careful'))
     }
 
     exec(`git commit -m \'${cmd}(${scope}): ${subject}${body}${footer}\'`, (err, stdout) => {
