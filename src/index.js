@@ -1,6 +1,7 @@
 const { Command } = require('commander')
 const gitWrapper = require('./actions/git-wrapper')
 const commands = require('./constants/commands')
+const interactive = require('./actions/interactive')
 const wdyd = new Command()
 
 wdyd
@@ -17,5 +18,9 @@ commands.forEach((command) => {
         .argument('[footer]', 'The footer should contain any information about Breaking Changes and is also the place to reference GitHub issues that this commit Closes.')
         .action((scope, subject, body, footer) => gitWrapper(command.name, scope, subject, body, footer))
 })
+
+wdyd.command('interactive')
+        .description('Create your commit in a interactive env')
+        .action(() => interactive())
 
 wdyd.parse()
