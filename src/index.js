@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const { Command } = require('commander')
 const gitWrapper = require('./actions/git-wrapper')
 const commands = require('./constants/commands')
