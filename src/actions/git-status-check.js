@@ -16,7 +16,7 @@ module.exports = () => {
             console.log(error('Nothing to commit, please check again and run at least \'git add <filename>\'.\nExiting'))
             process.exit()
         } else {
-            console.log(notice('You are commiting the following files:'))
+            console.log(notice('\n\nYou are commiting the following files:'))
             console.log(success(stdout))
         }
 

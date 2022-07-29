@@ -1,6 +1,8 @@
 const { exec } = require("child_process")
 var clc = require("cli-color")
 
+const gitStatusCheck = require("./git-status-check")
+
 const error = clc.red.bold
 const warn = clc.yellow
 const notice = clc.blue
@@ -11,6 +13,8 @@ module.exports = (cmd, scope, subject, body = undefined, footer = undefined) => 
     subject = subject.toLocaleLowerCase().trim()
     body = body !== undefined ? `\n\n${body.toLocaleLowerCase()}` : ''
     footer = footer !== undefined ? `\n${footer.trim()}` : ''
+
+    gitStatusCheck()
 
     if (body.length === 0) {
         console.log(notice('Sometimes it\'s better to specify a body to be more descriptive'))
