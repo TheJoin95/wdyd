@@ -9,7 +9,7 @@ const wdyd = new Command()
 wdyd
     .name('wdyd')
     .description('What Did You Do - A node CLI utility to write via interface great commit message (conventional commit guidelines)')
-    .version('0.0.1')
+    .version('0.4.0')
 
 commands.forEach((command) => {
     wdyd.command(command.name)
