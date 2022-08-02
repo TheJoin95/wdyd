@@ -1,5 +1,5 @@
 const { exec } = require("child_process")
-var clc = require("cli-color")
+const clc = require("cli-color")
 
 const gitStatusCheck = require("./git-status-check")
 
