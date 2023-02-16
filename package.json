@@ -30,7 +30,7 @@
   "homepage": "https://github.com/thejoin95/wdyd#readme",
   "dependencies": {
     "cli-color": "^2.0.3",
-    "commander": "^9.4.0",
+    "commander": "^9.5.0",
     "inquirer": "^7.3.3"
   }
 }
